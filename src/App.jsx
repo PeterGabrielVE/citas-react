@@ -1,5 +1,8 @@
 import Header from './components/Header';
+import Formulario  from './components/Formulario';
+import ListadoPacientes  from './components/ListadoPacientes';
 import './App.css'
+
 
 function App() {
  
@@ -7,6 +10,7 @@ function App() {
     <>
       <Header />
       <Formulario />
+      <ListadoPacientes />
     </>
   )
 }
