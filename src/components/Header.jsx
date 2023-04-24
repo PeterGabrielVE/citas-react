@@ -1,10 +1,11 @@
+import React from 'react'
 
-
-function Header(){
-
-    return (
-        <h1>Desde Header</h1>
-    )
+const Header = () => {
+  return (
+    <header>
+        <h1 className='text-4xl font-bold uppercase'>Desde header</h1>
+    </header>
+  )
 }
 
 export default Header;
