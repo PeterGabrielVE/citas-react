@@ -116,7 +116,7 @@ function Formulario({ pacientes, setPacientes, paciente }){
 
         <input type="submit"
         className="bg-indigo-600 w-full p-3 text-white uppercase font-bold hover:bg-indigo-700 cursor-pointer transition-all" 
-        value="Agregar Paciente" />
+        value={ paciente.id ? 'Editar Paciente':'Agregar Paciente' } />
 
       </form>
     </div>
