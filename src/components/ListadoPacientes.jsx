@@ -11,7 +11,8 @@ const ListadoPacientes = ({ pacientes }) =>{
                 <span className="text-indigo-600 font-bold text-xl">Pacientes y Citas</span>
             </p>
             { pacientes.map( paciente => ( 
-                <Paciente />
+                <Paciente 
+                paciente={paciente} />
             )) }
             
             
