@@ -12,7 +12,14 @@ function Formulario({ pacientes, setPacientes, paciente }){
   const [error, setError] = useState('');
 
   useEffect(() =>{
-    console.log(paciente)
+    if( Object.keys(paciente).length > 0 ){
+      setNombre(paciente.nombre)
+      setPropietario(paciente.propietario)
+      setEmail(paciente.email)
+      setFecha(paciente.fecha)
+      setSintomas(paciente.sintomas)
+      console.log('Si hay algo')
+    }
   }, [paciente]);
 
   const generarID = () =>{
