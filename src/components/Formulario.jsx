@@ -18,7 +18,6 @@ function Formulario({ pacientes, setPacientes, paciente }){
       setEmail(paciente.email)
       setFecha(paciente.fecha)
       setSintomas(paciente.sintomas)
-      console.log('Si hay algo')
     }
   }, [paciente]);
 
@@ -45,11 +44,23 @@ function Formulario({ pacientes, setPacientes, paciente }){
       propietario,
       email,
       fecha,
-      sintomas,
-      id: generarID()
+      sintomas
     }
 
-    setPacientes([...pacientes, objetoPaciente]);
+    if(paciente.id){
+      objetoPaciente.id = paciente.id;
+      console.log(objetoPaciente)
+      console.log(paciente)
+      
+      const pacientesActualizados = pacientes.map( pacienteState =>pacienteState.id === 
+      paciente.id ? objetoPaciente : pacienteState )
+
+      setPacientes(pacientesActualizados)
+
+    }else{
+      objetoPaciente.id = generarID();
+      setPacientes([...pacientes, objetoPaciente]);
+    }
 
     //reiniciar nombre
     setFecha('');
